@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{9C022677-ABFB-4CC2-8C37-7044DE50AED5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{27967B35-3A97-48C8-9611-DBEE35DD640D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C022677-ABFB-4CC2-8C37-7044DE50AED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C022677-ABFB-4CC2-8C37-7044DE50AED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C022677-ABFB-4CC2-8C37-7044DE50AED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C022677-ABFB-4CC2-8C37-7044DE50AED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27967B35-3A97-48C8-9611-DBEE35DD640D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27967B35-3A97-48C8-9611-DBEE35DD640D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27967B35-3A97-48C8-9611-DBEE35DD640D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27967B35-3A97-48C8-9611-DBEE35DD640D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
