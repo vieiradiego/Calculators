@@ -22,6 +22,5 @@ namespace Persistence.Components
         public void Load()
         { 
         }
-
     }
 }
