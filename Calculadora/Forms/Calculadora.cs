@@ -20,245 +20,298 @@ namespace Calculadora
     {
         private string resultScreen;
         private float result;
+        private float sizeFont;
         Operations oper = new Operations();
         Sum sum = new Sum();
         Subtraction sub = new Subtraction();
         Multiplication mul = new Multiplication();
         Division div = new Division();
         Percentage per = new Percentage();
+
         public Calculadora()
         {
             InitializeComponent();
             this.resultScreen = "0";
             this.result = 0;
+            this.sizeFont = 51.75f;
         }
 
         #region Numbers Buttons
         private void zeroButton_Click(object sender, EventArgs e)
         {
-            if ((this.resultScreen.Contains(".")) || (this.resultScreen.Contains('+')) ||
+            if (this.resultLabel.Text.Length <= 14)
+            {
+                if ((this.resultScreen.Contains(".")) || (this.resultScreen.Contains('+')) ||
                                                       (this.resultScreen.Contains('-')) ||
                                                       (this.resultScreen.Contains('x')) ||
                                                       (this.resultScreen.Contains('÷')))
-            {
-                this.resultScreen = this.resultScreen + "0";
+                {
+                    this.resultScreen = this.resultScreen + "0";
+                }
+                if (this.resultScreen.Equals("0"))
+                {
+                    this.resultScreen = "0";
+                }
+                if (!this.resultScreen.Equals("0") && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = this.resultScreen + "0";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            if (this.resultScreen.Equals("0"))
-            {
-                this.resultScreen = "0"; 
-            }
-            if (!this.resultScreen.Equals("0") && (!this.resultScreen.Contains(".")))
-            {
-                this.resultScreen = this.resultScreen + "0"; 
-            }
-            this.resultLabel.Text = this.resultScreen;
-
         }
 
         private void oneButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "1";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "1";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "1";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "1";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void twoButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "2";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "2";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "2";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "2";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void threeButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "3";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "3";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "3";
+                }
+                this.resultLabel.Text = this.resultScreen;    
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "3";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void fourButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "4";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "4";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "4";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "4";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void fiveButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "5";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "5";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "5";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "5";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void sixButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "6";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "6";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "6";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "6";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void sevenButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "7";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "7";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "7";
+                }
+                this.resultLabel.Text = this.resultScreen;    
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "7";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void eightButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "8";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "8";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "8";
+                }
+                this.resultLabel.Text = this.resultScreen;    
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "8";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void nineButton_Click(object sender, EventArgs e)
         {
-            if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.resultScreen = "9";
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if ((this.result == 0) && (!this.resultScreen.Contains(".")))
+                {
+                    this.resultScreen = "9";
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+                else
+                {
+                    this.resultScreen = this.resultScreen + "9";
+                }
+                this.resultLabel.Text = this.resultScreen;
             }
-            else
-            {
-                this.resultScreen = this.resultScreen + "9";
-            }
-            this.resultLabel.Text = this.resultScreen;
         }
 
         private void commaButton_Click(object sender, EventArgs e)
         {
-            if (this.resultScreen.Contains('.'))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                if ((this.resultScreen.Contains('+')) || (this.resultScreen.Contains('-')) ||
-                    (this.resultScreen.Contains('x')) || (this.resultScreen.Contains('÷')))
+                if (this.resultScreen.Contains('.'))
                 {
-                    if (this.countChar(this.resultScreen, '.') == 2)
-                    {//Não coloca o ponto, pois já temos 2 pontos. Um antes e um depois da operação
-                        
-                    }
-                    else 
+                    if ((this.resultScreen.Contains('+')) || (this.resultScreen.Contains('-')) ||
+                        (this.resultScreen.Contains('x')) || (this.resultScreen.Contains('÷')))
                     {
-                        this.resultScreen = this.resultScreen + ".";
-                        this.resultLabel.Text = this.resultScreen;
+                        if (this.countChar(this.resultScreen, '.') == 2)
+                        {//Não coloca o ponto, pois já temos 2 pontos. Um antes e um depois da operação
+
+                        }
+                        else
+                        {
+                            this.resultScreen = this.resultScreen + ".";
+                            this.resultLabel.Text = this.resultScreen;
+                        }
                     }
                 }
+                else
+                {
+                    this.resultScreen = this.resultScreen + ".";
+                    this.resultLabel.Text = this.resultScreen;
+                }
             }
-            else 
-            {
-                this.resultScreen = this.resultScreen + ".";
-                this.resultLabel.Text = this.resultScreen;
-            }
-            
         }
         #endregion
 
         #region Operations Buttons
         private void addButton_Click(object sender, EventArgs e)
         {
-            if (!this.resultScreen.Contains('+'))
+            if (this.resultLabel.Text.Length <= 14)
             {
-                this.oper = new Sum();
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
-                this.oper.setResult(this.result);
-                this.resultScreen = this.resultScreen + "+";
-                this.resultLabel.Text = this.resultScreen;
+                if (!this.resultScreen.Contains('+'))
+                {
+                    this.oper = new Sum();
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                    this.oper.setResult(this.result);
+                    this.resultScreen = this.resultScreen + "+";
+                    this.resultLabel.Text = this.resultScreen;
+                }
             }
-
         }
         private void subtractButton_Click(object sender, EventArgs e)
         {
-            this.oper = new Subtraction();
-            this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
-            this.oper.setResult(this.result);
-            this.resultScreen = this.resultScreen + "-";
-            this.resultLabel.Text = this.resultScreen;
+            if (this.resultLabel.Text.Length <= 14)
+            {
+                this.oper = new Subtraction();
+                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                this.oper.setResult(this.result);
+                this.resultScreen = this.resultScreen + "-";
+                this.resultLabel.Text = this.resultScreen;
+            }
         }
         private void multiplyButton_Click(object sender, EventArgs e)
         {
-            this.oper = new Multiplication();
-            this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
-            this.oper.setResult(this.result);
-            this.resultScreen = this.resultScreen + "x";
-            this.resultLabel.Text = this.resultScreen;
+            if (this.resultLabel.Text.Length <= 14)
+            {
+                this.oper = new Multiplication();
+                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                this.oper.setResult(this.result);
+                this.resultScreen = this.resultScreen + "x";
+                this.resultLabel.Text = this.resultScreen;
+            }
         }
         private void divideButton_Click(object sender, EventArgs e)
         {
-            this.oper = new Division();
-            this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
-            this.oper.setResult(this.result);
-            this.resultScreen = this.resultScreen + "÷";
-            this.resultLabel.Text = this.resultScreen;
+            if (this.resultLabel.Text.Length <= 14)
+            {
+                this.oper = new Division();
+                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                this.oper.setResult(this.result);
+                this.resultScreen = this.resultScreen + "÷";
+                this.resultLabel.Text = this.resultScreen;
+            }
         }
         private void equalButton_Click(object sender, EventArgs e)
         {
-            this.resultScreen = Convert.ToString(this.oper.operate(this.oper.getNumber(this.resultScreen)));
-            this.resultScreen = this.resultScreen.Replace(',', '.');
-            this.resultLabel.Text = this.resultScreen;
-            this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+            if (this.resultLabel.Text.Length <= 14)
+            {
+                this.resultScreen = Convert.ToString(this.oper.operate(this.oper.getNumber(this.resultScreen)));
+                this.resultScreen = this.resultScreen.Replace(',', '.');
+                this.resultLabel.Text = this.resultScreen;
+                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+            }
         }
         private void percentageButton_Click(object sender, EventArgs e)
         {
+            if (this.resultLabel.Text.Length <= 14)
+            { 
+            }
 
         }
         private void inverterButton_Click(object sender, EventArgs e)
         {
-
+            if (this.resultLabel.Text.Length <= 14)
+            {
+            }
         }
         private void clearButton_Click(object sender, EventArgs e)
         {
@@ -269,6 +322,7 @@ namespace Calculadora
             this.per.setResult(0);
             this.resultScreen = "0";
             this.resultLabel.Text = this.resultScreen;
+            this.resultLabel_TextChanged(sender,e);
             this.result = 0;
         }
         public void backButton_Click(object sender, EventArgs e)
@@ -423,13 +477,71 @@ namespace Calculadora
         }
         #endregion
 
-        #region Business Functions
-        private void screenControler()
+        #region Changed
+        
+        private void resultLabel_TextChanged(object sender, EventArgs e)
         {
-            if (this.resultLabel.Text.Length == 5)
-            { //Fonte 51.75
-                
+            this.screenControler(sender, e);
+        }
+
+        #endregion
+
+        #region Business Functions
+        private void screenControler(object sender, EventArgs e)
+        {   //Fonte 52 Normal
+            if (this.resultLabel.Text.Length <= 9)
+            {
+
+                if (this.resultLabel.Text.Length <= 5)
+                {
+                    this.sizeFont = 52;
+                }
+                if (this.resultLabel.Text.Length == 6)
+                {
+                    this.sizeFont = 46;
+                }
+                if (this.resultLabel.Text.Length == 7)
+                {
+                    this.sizeFont = 42;
+                }
+                if (this.resultLabel.Text.Length == 8)
+                {
+                    this.sizeFont = 36;
+                }
+                if (this.resultLabel.Text.Length == 9)
+                {
+                    this.sizeFont = 32;
+                }
             }
+            else if (this.resultLabel.Text.Length >= 10)
+            {
+                if (this.resultLabel.Text.Length == 10)
+                {
+                    this.sizeFont = 30;
+                }
+                if (this.resultLabel.Text.Length == 11)
+                {
+                    this.sizeFont = 26;
+                }
+                if (this.resultLabel.Text.Length == 12)
+                {
+                    this.sizeFont = 24;
+                }
+                if (this.resultLabel.Text.Length == 13)
+                {
+                    this.sizeFont = 22;
+                }
+                if (this.resultLabel.Text.Length == 14)
+                {
+                    this.sizeFont = 20;
+                }
+                if (this.resultLabel.Text.Length == 15)
+                {
+                    this.sizeFont = 20;
+                }
+            }
+            
+            this.resultLabel.Font = new Font("Arial Unicode MS", this.sizeFont);
         }
         private void eraser(int quant)
         {
@@ -458,5 +570,6 @@ namespace Calculadora
             return count;
         }
         #endregion
+
     }
 }

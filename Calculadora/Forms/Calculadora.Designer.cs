@@ -326,17 +326,18 @@
             // resultLabel
             // 
             this.resultLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.resultLabel.Font = new System.Drawing.Font("Arial Unicode MS", 51.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultLabel.Font = new System.Drawing.Font("Arial Unicode MS", 52F);
             this.resultLabel.ForeColor = System.Drawing.Color.White;
             this.resultLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.resultLabel.Location = new System.Drawing.Point(0, 20);
+            this.resultLabel.Location = new System.Drawing.Point(0, 9);
             this.resultLabel.Margin = new System.Windows.Forms.Padding(0);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.resultLabel.Size = new System.Drawing.Size(249, 79);
+            this.resultLabel.Size = new System.Drawing.Size(249, 90);
             this.resultLabel.TabIndex = 20;
-            this.resultLabel.Text = "0";
+            this.resultLabel.Text = "01234";
             this.resultLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.resultLabel.TextChanged += new System.EventHandler(this.resultLabel_TextChanged);
             // 
             // panel1
             // 
@@ -401,8 +402,8 @@
         private System.Windows.Forms.Button subtractButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button equalButton;
-        private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label resultLabel;
 
     }
 }
