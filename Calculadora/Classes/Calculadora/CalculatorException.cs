@@ -13,5 +13,13 @@ namespace Calculadora.Classes.Calculadora
           //Div 0
         
         }
+        public void error()
+        { 
+        
+        }
+        public void divisionZero()
+        { 
+
+        }
     }
 }
