@@ -16,5 +16,12 @@ namespace Persistence.Components
         {
             InitializeComponent();
         }
+        public void Save()
+        { 
+        }
+        public void Load()
+        { 
+        }
+
     }
 }

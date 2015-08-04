@@ -47,6 +47,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Persistence">
+      <HintPath>..\Persistence\bin\Debug\Persistence.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,9 +64,7 @@
   <ItemGroup>
     <Compile Include="Classes\Calculadora\Inverter.cs" />
     <Compile Include="Classes\Calculadora\Percentage.cs" />
-    <Compile Include="Forms\Calculadora.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Forms\Calculadora.cs" />
     <Compile Include="Forms\Calculadora.Designer.cs">
       <DependentUpon>Calculadora.cs</DependentUpon>
     </Compile>
