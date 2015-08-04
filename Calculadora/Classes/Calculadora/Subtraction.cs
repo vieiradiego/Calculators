@@ -24,6 +24,10 @@ namespace Calculadora.Classes
             {
                 throw;
             }
+            catch (Exception e)
+            {
+                throw;
+            }
         }
         public override string getNumber(string expression)
         {

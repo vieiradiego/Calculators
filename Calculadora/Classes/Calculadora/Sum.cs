@@ -23,6 +23,11 @@ namespace Calculadora.Classes
             }
             catch (CalculatorException e)
             {
+                e.error();
+                throw;
+            }
+            catch (Exception e)
+            {
                 throw;
             }
         }

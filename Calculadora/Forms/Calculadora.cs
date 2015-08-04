@@ -292,12 +292,22 @@ namespace Calculadora
         }
         private void equalButton_Click(object sender, EventArgs e)
         {
-            if (this.resultLabel.Text.Length <= 14)
+            try
             {
-                this.resultScreen = Convert.ToString(this.oper.operate(this.oper.getNumber(this.resultScreen)));
-                this.resultScreen = this.resultScreen.Replace(',', '.');
-                this.resultLabel.Text = this.resultScreen;
-                this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                if (this.resultLabel.Text.Length <= 14)
+                {
+                    this.resultScreen = Convert.ToString(this.oper.operate(this.oper.getNumber(this.resultScreen)));
+                    this.resultScreen = this.resultScreen.Replace(',', '.');
+                    this.resultLabel.Text = this.resultScreen;
+                    this.result = float.Parse(this.resultScreen, CultureInfo.InvariantCulture.NumberFormat);
+                }
+            }
+            catch (CalculatorException)
+            {
+                this.resultLabel.Text = "Error";
+            }
+            catch (Exception)
+            {
             }
         }
         private void percentageButton_Click(object sender, EventArgs e)

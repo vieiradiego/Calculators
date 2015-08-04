@@ -335,7 +335,7 @@
             this.resultLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.resultLabel.Size = new System.Drawing.Size(249, 90);
             this.resultLabel.TabIndex = 20;
-            this.resultLabel.Text = "01234";
+            this.resultLabel.Text = "0";
             this.resultLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.resultLabel.TextChanged += new System.EventHandler(this.resultLabel_TextChanged);
             // 
