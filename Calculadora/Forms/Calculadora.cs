@@ -245,6 +245,11 @@ namespace Calculadora
         #region Operations Buttons
         private void addButton_Click(object sender, EventArgs e)
         {
+            if ((this.resultScreen.Contains('+')) || (this.resultScreen.Contains('-')) ||
+                (this.resultScreen.Contains('x')) || (this.resultScreen.Contains('÷')))
+            {
+                this.equalButton_Click(sender, e);
+            }
             if (this.resultLabel.Text.Length <= 14)
             {
                 if (!this.resultScreen.Contains('+'))
@@ -259,6 +264,11 @@ namespace Calculadora
         }
         private void subtractButton_Click(object sender, EventArgs e)
         {
+            if ((this.resultScreen.Contains('+')) || (this.resultScreen.Contains('-')) ||
+               (this.resultScreen.Contains('x')) || (this.resultScreen.Contains('÷')))
+            {
+                this.equalButton_Click(sender, e);
+            }
             if (this.resultLabel.Text.Length <= 14)
             {
                 this.oper = new Subtraction();
@@ -270,6 +280,11 @@ namespace Calculadora
         }
         private void multiplyButton_Click(object sender, EventArgs e)
         {
+            if ((this.resultScreen.Contains('+')) || (this.resultScreen.Contains('-')) ||
+               (this.resultScreen.Contains('x')) || (this.resultScreen.Contains('÷')))
+            {
+                this.equalButton_Click(sender, e);
+            }
             if (this.resultLabel.Text.Length <= 14)
             {
                 this.oper = new Multiplication();
@@ -281,6 +296,11 @@ namespace Calculadora
         }
         private void divideButton_Click(object sender, EventArgs e)
         {
+            if ((this.resultScreen.Contains('+')) || (this.resultScreen.Contains('-')) ||
+               (this.resultScreen.Contains('x')) || (this.resultScreen.Contains('÷')))
+            {
+                this.equalButton_Click(sender, e);
+            }
             if (this.resultLabel.Text.Length <= 14)
             {
                 this.oper = new Division();
