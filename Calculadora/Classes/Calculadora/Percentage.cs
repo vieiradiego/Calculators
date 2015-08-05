@@ -21,11 +21,11 @@ namespace Calculadora.Classes.Calculadora
         {
             this.oper = oper;
         }
-        public override float operate(string number)
+        public override double operate(string number)
         {
             try
             {
-                double temp = float.Parse(number, CultureInfo.InvariantCulture.NumberFormat);
+                double temp = double.Parse(number, CultureInfo.InvariantCulture.NumberFormat);
                 temp = temp / 100;
                 this.setResult(oper.operate(Convert.ToString(temp)));
                 return this.getResult();

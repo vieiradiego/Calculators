@@ -14,11 +14,11 @@ namespace Calculadora.Classes
         {//Constructor method
         
         }
-        public override float operate(string number)
+        public override double operate(string number)
         {
             try
             {
-                this.setResult(this.getResult() / float.Parse(number, CultureInfo.InvariantCulture.NumberFormat));
+                this.setResult(this.getResult() / double.Parse(number, CultureInfo.InvariantCulture.NumberFormat));
                 return this.getResult();
             }
             catch (CalculatorException e)

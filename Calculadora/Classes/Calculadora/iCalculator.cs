@@ -10,7 +10,7 @@ namespace Calculadora.Classes.Calculadora
 {
     public interface iCalculator
     {
-        float getResult();
-        void setResult(float number);
+        double getResult();
+        void setResult(double number);
     }
 }

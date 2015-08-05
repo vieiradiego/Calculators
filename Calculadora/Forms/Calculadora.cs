@@ -508,26 +508,26 @@ namespace Calculadora
                 }
                 if (this.resultLabel.Text.Length == 6)
                 {
-                    this.sizeFont = 46;
+                    this.sizeFont = 44;
                 }
                 if (this.resultLabel.Text.Length == 7)
                 {
-                    this.sizeFont = 42;
+                    this.sizeFont = 40;
                 }
                 if (this.resultLabel.Text.Length == 8)
                 {
-                    this.sizeFont = 36;
+                    this.sizeFont = 34;
                 }
                 if (this.resultLabel.Text.Length == 9)
                 {
-                    this.sizeFont = 32;
+                    this.sizeFont = 30;
                 }
             }
             else if (this.resultLabel.Text.Length >= 10)
             {
                 if (this.resultLabel.Text.Length == 10)
                 {
-                    this.sizeFont = 30;
+                    this.sizeFont = 28;
                 }
                 if (this.resultLabel.Text.Length == 11)
                 {
@@ -547,7 +547,7 @@ namespace Calculadora
                 }
                 if (this.resultLabel.Text.Length == 15)
                 {
-                    this.sizeFont = 20;
+                    this.sizeFont = 18;
                 }
             }
             

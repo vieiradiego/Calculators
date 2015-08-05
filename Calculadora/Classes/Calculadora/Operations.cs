@@ -9,16 +9,16 @@ namespace Calculadora.Classes.Calculadora
 {
     public class Operations : iCalculator
     {
-        private float result;
-        public float getResult()
+        private double result;
+        public double getResult()
         {
             return this.result;
         }
-        public void setResult(float number)
+        public void setResult(double number)
         {
             this.result = number;
         }
-        public virtual float operate(string number)
+        public virtual double operate(string number)
         {
             return this.getResult();
         }
