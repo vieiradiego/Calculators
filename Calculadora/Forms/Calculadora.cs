@@ -26,7 +26,7 @@ namespace Calculadora
         Subtraction sub = new Subtraction();
         Multiplication mul = new Multiplication();
         Division div = new Division();
-        Percentage per = new Percentage();
+        Percentage per = new Percentage(new Operations());
 
         public Calculadora()
         {

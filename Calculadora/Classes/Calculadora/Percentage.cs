@@ -10,12 +10,14 @@ namespace Calculadora.Classes.Calculadora
     public class Percentage : Operations
     {
         private Operations oper;
-        public Percentage()
+        private Operations operation;
+        public Percentage(Operations operation)
         {//Constructor method
+            this.operation = operation;
         }
         public Operations getOper()
         {
-            return this.oper;
+            return this.operation;
         }
         public void setOper(Operations oper)
         {
@@ -25,9 +27,13 @@ namespace Calculadora.Classes.Calculadora
         {
             try
             {
-                double temp = double.Parse(number, CultureInfo.InvariantCulture.NumberFormat);
-                temp = temp / 100;
-                this.setResult(oper.operate(Convert.ToString(temp)));
+                string s = "";
+                s = number.Substring(((number.IndexOf('x') + 1)), (number.Length - (number.IndexOf('x') - 2)));
+                s = (double.Parse(s, CultureInfo.InvariantCulture.NumberFormat) / 100).ToString();
+                s = s.Replace(',', '.');
+                double temp = double.Parse(s, CultureInfo.InvariantCulture.NumberFormat);
+                temp = getResult() * temp;
+                this.setResult(operation.operate(Convert.ToString(temp)));
                 return this.getResult();
             }
             catch (CalculatorException e)
