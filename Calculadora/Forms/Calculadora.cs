@@ -10,13 +10,12 @@ using System.Windows.Forms;
 using Calculadora.Classes;
 using Calculadora.Classes.Calculadora;
 using System.Globalization;
-using Persistence.Components;
 
 
 
 namespace Calculadora
 {
-    public partial class Calculadora : PForm
+    public partial class Calculadora : Form
     {
         private string resultScreen;
         private float result;
