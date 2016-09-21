@@ -363,66 +363,70 @@ namespace Calculadora
 
         # region KeyDown
         private void keyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.D0)
+       {
+            if ((e.KeyCode == Keys.D0) || (e.KeyCode == Keys.NumPad0))
             {
                 this.zeroButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D1)
+            if ((e.KeyCode == Keys.D1) || (e.KeyCode == Keys.NumPad1))
             {
                 this.oneButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D2)
+            if ((e.KeyCode == Keys.D2) || (e.KeyCode == Keys.NumPad2))
             {
                 this.twoButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D3)
+            if ((e.KeyCode == Keys.D3) || (e.KeyCode == Keys.NumPad3))
             {
                 this.threeButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D4)
+            if ((e.KeyCode == Keys.D4) || (e.KeyCode == Keys.NumPad4))
             {
                 this.fourButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D5)
+            if ((e.KeyCode == Keys.D5) || (e.KeyCode == Keys.NumPad5))
             {
                 this.fiveButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D6)
+            if ((e.KeyCode == Keys.D6) || (e.KeyCode == Keys.NumPad6))
             {
                 this.sixButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D7)
+            if ((e.KeyCode == Keys.D7) || (e.KeyCode == Keys.NumPad7))
             {
                 this.sevenButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D8)
+            if ((e.KeyCode == Keys.D8) || (e.KeyCode == Keys.NumPad8))
             {
                 this.eightButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.D9)
+            if ((e.KeyCode == Keys.D9) || (e.KeyCode == Keys.NumPad9))
             {
                 this.nineButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.Oemcomma)
+            if ((e.KeyCode == Keys.Oemcomma) || (e.KeyValue == 194))
             {
                 this.commaButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.OemPeriod)
+            if ((e.KeyCode == Keys.OemPeriod)|| (e.KeyCode == Keys.Decimal))
             {
                 this.commaButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.Oemplus)
+            if ((e.KeyCode == Keys.Oemplus) || (e.KeyCode == Keys.Add))
             {
                 this.addButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.OemMinus)
+            if ((e.KeyCode == Keys.OemMinus) || (e.KeyCode == Keys.Subtract))
             {
                 this.subtractButton_Click(sender, e);
             }
-            if (e.KeyCode == Keys.Back)
+            if ((e.KeyCode == Keys.Back) || (e.KeyCode == Keys.Delete))
             {
                 this.backButton_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.Delete)
+            {
+                this.clearButton_Click(sender, e);
             }
         }
         private void clearButton_KeyDown(object sender, KeyEventArgs e)
@@ -521,7 +525,6 @@ namespace Calculadora
         {   //Fonte 52 Normal
             if (this.resultLabel.Text.Length <= 9)
             {
-
                 if (this.resultLabel.Text.Length <= 5)
                 {
                     this.sizeFont = 52;
@@ -570,7 +573,6 @@ namespace Calculadora
                     this.sizeFont = 18;
                 }
             }
-            
             this.resultLabel.Font = new Font("Arial Unicode MS", this.sizeFont);
         }
         private void eraser(int quant)
